@@ -1,36 +1,23 @@
-import { ScrollView, Text, StyleSheet } from "react-native";
+import { ScrollView, Text, StyleSheet, Image } from "react-native";
 
 export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={[styles.textPequeno, styles.cor1]}>
-        1. Este é um parágrafo pequeno e colorido.
+      <Text style={[styles.textGrande, styles.cor1]}>
+        Etec de itanhaém
       </Text>
-      
-      <Text style={[styles.textMedio, styles.cor2, styles.italico]}>
-        2. Este parágrafo é médio, Turquesa e está em itálico.
-      </Text>
-      
-      <Text style={[styles.textGrande, styles.cor3]}>
-        3. Já este aqui é um parágrafo grande e vibrante.
-      </Text>
-      
-      <Text style={[styles.textPequeno, styles.cor4, styles.sublinhado]}>
-        4. Pequeno, e com um sublinhado elegante.
-      </Text>
-      
-      <Text style={[styles.textMedio, styles.cor5]}>
-        5. Um parágrafo médio com uma cor bem suave.
-      </Text>
-      
-      <Text style={[styles.textGrande, styles.cor6, styles.italico]}>
-        6. O último parágrafo é grande e itálico e fecha a lista com destaque.
-      </Text>
+      <Image source={require("../../assets/images/cps.jpg")} style={styles.imagem}/>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  imagem: {
+  width: 200,
+  height: 200,
+  resizeMode: "contain",
+  marginBottom: 15,
+},
   container: {
     padding: 40,
     alignItems: 'center',
